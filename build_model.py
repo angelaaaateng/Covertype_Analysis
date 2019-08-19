@@ -250,7 +250,7 @@ def hyper_param_rf(X_train, y_train, X_test, y_test):
     #'max_features': [2, 3, 4, 10],
     'min_samples_leaf': [1],
     'min_samples_split': [2],
-    'n_estimators': [300]
+    'n_estimators': [40]
     }
     grid_search_optimal = GridSearchCV(estimator = rfc, param_grid = n_optimal_param_grid,
                           cv = 3, n_jobs = -1, verbose = 2)
