@@ -2,15 +2,14 @@
 import sys
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
+
+
 from scipy.stats import norm
 from sklearn.preprocessing import StandardScaler
 from scipy import stats
 import warnings
 warnings.filterwarnings('ignore')
-from plotly import __version__
-from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
+
 from pprint import pprint
 from sklearn.externals.six import StringIO
 from sklearn import preprocessing

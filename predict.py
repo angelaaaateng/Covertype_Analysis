@@ -27,20 +27,19 @@ from sklearn.externals.six import StringIO
 from sklearn.model_selection import validation_curve
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import GridSearchCV
-from collections import Counter
-from imblearn.datasets import make_imbalance
+
+
 from imblearn.metrics import classification_report_imbalanced
 from sklearn import tree
 
 
 import os
-from sklearn import inspection
-import mlxtend
+
 from sklearn.model_selection import GridSearchCV
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from mlxtend.evaluate import feature_importance_permutation
+
 
 def hyper_param_rf_predict(X_train, y_train, X_test, y_test):
     rfc = RandomForestClassifier()

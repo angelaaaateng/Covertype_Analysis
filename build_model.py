@@ -5,69 +5,52 @@ import scipy as sp
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.stats import norm
-from sklearn.preprocessing import StandardScaler
+
 import warnings
 warnings.filterwarnings('ignore')
 from pprint import pprint
-from yellowbrick.features import RFECV
+
 from sklearn.model_selection import train_test_split
 from IPython.display import Image
 from sklearn.externals.six import StringIO
 from sklearn.tree import export_graphviz
-import pydot
-from random import sample
+
+
 from collections import Counter
 from imblearn.datasets import make_imbalance
 from imblearn.metrics import classification_report_imbalanced
 from sklearn import tree
-import pydotplus
+
 from sklearn.preprocessing import MinMaxScaler
 import os
 print(__doc__)
-import numpy as np
-import scipy as sp
-import pandas as pd
-import matplotlib.pyplot as plt
+
 import seaborn as sns
-from scipy.stats import norm
-from sklearn.preprocessing import StandardScaler
-from scipy import stats
-import warnings
-warnings.filterwarnings('ignore')
-from plotly import __version__
-from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
-from pprint import pprint
-from yellowbrick.features import RFECV
+
+
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import StratifiedKFold
-from sklearn.model_selection import train_test_split
+
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.feature_selection import RFE
+
 from sklearn import metrics
 from sklearn.ensemble import ExtraTreesClassifier
 from sklearn.metrics import classification_report,confusion_matrix
 import sklearn.model_selection as model_selection
-from IPython.display import Image
-from sklearn.externals.six import StringIO
-from sklearn.tree import export_graphviz
-import pydot
-from random import sample
+
+
 from sklearn import preprocessing
 from sklearn.model_selection import validation_curve
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import GridSearchCV
-from collections import Counter
-from imblearn.datasets import make_imbalance
-from imblearn.metrics import classification_report_imbalanced
-from sklearn import tree
-import pydotplus
-from sklearn.preprocessing import MinMaxScaler
-import os
-from sklearn import inspection
-import mlxtend
-from sklearn.model_selection import GridSearchCV
 
-from mlxtend.evaluate import feature_importance_permutation
+from sklearn import tree
+
+
+import os
+
+
+
 print(__doc__)
 print(__name__)
 
