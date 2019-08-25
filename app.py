@@ -17,7 +17,8 @@ import os
 import jinja2
 import matplotlib
 
-matplotlib.use("TKAgg")
+#matplotlib.use("TKAgg")
+matplotlib.use('Agg')
 print(matplotlib.get_backend())
 
 import matplotlib.pyplot as plt
