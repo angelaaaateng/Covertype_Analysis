@@ -25,9 +25,17 @@ def hyper_param_rf_pickle(X_test, y_test, model):
     y_pred = rfc.predict(X_test)
     # print ("Random Forest Train Accuracy Baseline After Grid Search:", metrics.accuracy_score(y_train, grid_search_optimal.predict(X_train)))
     print ("Random Forest Test Accuracy Baseline After Grid Search:", metrics.accuracy_score(y_test, rfc.predict(X_test)))
-    type(y_test)
-    type(y_pred)
-    y_test = y_test.values.to_numpy()
+    print("Y Test Type", type(y_test))
+    print("Y Pred Type", type(y_pred))
+    y_test = (y_test.as_matrix(columns=None)).astype(int)
+    #y_test = np.vectorize(y_test.as_matrix(columns=None))
+    #y_test = int(y_test.as_matrix(columns=None))
+    print("Y Test New Type", type(y_test))
+    #y_test = y_test.values
+    #y_test = pd.Series(y_test).values
+    #for i in y_test:
+    #    np.int(i)
+    #y_test = np.vectorize(y_test)
     print(y_test)
     print(y_pred)
     print("* CONF MAT PRINTING WITH Y TEST AND Y PRED")
