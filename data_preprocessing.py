@@ -109,7 +109,7 @@ def normalize_data(df4, df4_column_names):
     #X_test_new=df_normalized_w_target[list(df_normalized_w_target.columns)[7:-1]]
     #perm feat
     X_test_new = X.iloc[:,[0,5,9,3,12,13,4,23,7,10,16,6,52]]
-    print("* X TEST NEW PRINTING")
+    print("* X TEST NEW PRINTING")   
     print(X_test_new)
     #X_test_new = X[:,[0,5,9,3,12,13,4,23,7,10]]
     y_test_new=df_normalized_w_target[list(df_normalized_w_target.columns)[-1]]
