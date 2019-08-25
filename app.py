@@ -65,7 +65,9 @@ def transform_view():
         return("No file selected. Please choose a CSV file and try again.")
 
     stream = io.StringIO(f.stream.read().decode("UTF8"), newline=None)
+    print("stream", stream)
     csv_input = csv.reader(stream)
+    print("csv input", csv_input)
     print("* Processing csv_input -- API")
     df = pd.DataFrame(csv_input, index=None, columns=None)
 
