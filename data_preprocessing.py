@@ -95,17 +95,23 @@ def read_data(csv_file):
 
 #data, df4, df4_column_names = read_data("./covtype.data")
 
-
 def normalize_data(df4, df4_column_names):
     x = df4.loc[:, df4.columns != 'Cover_Type'].values #returns a numpy array
+    #x = X.iloc[:,[0,5,9,3,12,13,4,23,7,10]]
     min_max_scaler = preprocessing.MinMaxScaler()
     x_scaled = min_max_scaler.fit_transform(x)
     df_normalized = pd.DataFrame(data=x_scaled, columns=df4_column_names)
     #print(df_normalized)
     df_normalized_w_target = pd.concat([df_normalized, df4['Cover_Type']], axis=1)
+    X=df_normalized_w_target[list(df_normalized_w_target.columns)[7:-1]]
     df_dummy = df_normalized_w_target
     df_dummy = df_dummy.drop(['Cover_Type'], axis=1)
-    X_test_new=df_normalized_w_target[list(df_normalized_w_target.columns)[7:-1]]
+    #X_test_new=df_normalized_w_target[list(df_normalized_w_target.columns)[7:-1]]
+    #perm feat
+    X_test_new = X.iloc[:,[0,5,9,3,12,13,4,23,7,10,16,6,52]]
+    print("* X TEST NEW PRINTING")
+    print(X_test_new)
+    #X_test_new = X[:,[0,5,9,3,12,13,4,23,7,10]]
     y_test_new=df_normalized_w_target[list(df_normalized_w_target.columns)[-1]]
     print('* Data Normalized - preprocessing')
     # print(y_test)
