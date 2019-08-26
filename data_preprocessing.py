@@ -31,6 +31,7 @@ def read_data(csv_file):
     Read Data
     '''
     data = csv_file
+    print("THIS IS DATA", data)
     #csv_input = csv.reader(stream)
     # data = pd.DataFrame([csv_file], index=None)
     # data = pd.read_data(csv_file, header=None)
@@ -85,6 +86,7 @@ def read_data(csv_file):
     print('* Data loaded - preprocessing...')
     cov_dummy = pd.get_dummies(data['Cover_Type'])
     df4 = pd.concat([cov_dummy, data], axis = 1)
+    print("THIS IS DF4", df4)
     df4_column_names = list(df4.columns)
     df4_column_names.remove('Cover_Type')
     print('* Data loaded - preprocessing complete')
@@ -92,6 +94,7 @@ def read_data(csv_file):
     #print(df4)
     #print(read_data)
     # print(df4_column_names)
+    print(df4.shape)
     return(data, df4, df4_column_names);
 
 #data, df4, df4_column_names = read_data("./covtype.data")
