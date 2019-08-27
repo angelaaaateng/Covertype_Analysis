@@ -37,6 +37,7 @@ def load_model():
     '''
     global model
     model = load('./grid_search_optimal.joblib')
+    print(model)
 
     print("* Model loaded successfully")
 
@@ -85,6 +86,7 @@ def transform_view():
     # print("* Data Initialized for First Pickle")
 
     rfc_test_acc, y_pred, class_rept, conf_mat = hyper_param_rf_pickle(X_test_new, y_test_new, model)
+    print("HyperParam Pickle Model", model)
     print("* Hyperparameter search complete -- API")
     y_test_new = (y_test_new.as_matrix(columns=None)).astype(int)
     print("Y Test New Type:", type(y_test_new))
