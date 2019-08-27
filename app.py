@@ -37,8 +37,8 @@ def load_model():
     that we can use after startup
     '''
     global model
-    model = load('./grid_search_optimal.joblib')
-    print(model)
+    model = load('./grid_search_optimal.joblib', binary=True)
+    print("loadmodel", model)
 
     print("* Model loaded successfully")
 
