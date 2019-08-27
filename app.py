@@ -28,6 +28,7 @@ IMAGE_FOLDER = os.path.join('static', 'people_photo')
 app = Flask(__name__, template_folder='templates', static_folder='Static')
 # app.config['UPLOAD_FOLDER'] = IMAGE_FOLDER
 model = None
+print("Model", model)
 
 
 def load_model():
