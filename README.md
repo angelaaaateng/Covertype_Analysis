@@ -22,3 +22,12 @@ The dataset was retrieved from this source: https://archive.ics.uci.edu/ml/datas
 The flask app can be found here: https://covertype.herokuapp.com/ When testing out a dataset, ensure that it has at least one instance of each class.
 
 The blog post that describes this can be found here:
+
+Important Heroku commands for commiting + running on local: 
+git remote -v 
+git add . 
+git commit -am " " 
+git push heroku master
+heroku ps:scale web=1
+heroku logs --tail
+heroku open 
